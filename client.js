@@ -14,7 +14,7 @@ client.connect(PORT, HOST, () => {
   const message = 'Hello';
   const test = Buffer.from(message);
 
-  const header = writeHeader(test.length, 10);
+  const header = writeHeader(test.length, 11);
   const packet = Buffer.concat([header, test]);
   client.write(packet);
 });
